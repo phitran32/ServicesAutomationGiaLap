@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLSANPHAMMAY2023" Class="QLSANPHAMMAY2023DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.2.182;Initial Catalog=QLSANPHAMMAY2023;Persist Security Info=True;User ID=sa" SettingsObjectName="AutoSendCapNhapDH.Properties.Settings" SettingsPropertyName="QLSANPHAMMAY2023ConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DMLOAISP" Member="DMLOAISPs">
+    <Type Name="DMLOAISP">
+      <Column Name="LOAISP" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENLOAI" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="HIEULUC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Kytu1" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="DMLOAISP_DMMAHANG" Member="DMMAHANGs" ThisKey="LOAISP" OtherKey="LOAISP" Type="DMMAHANG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DMMAHANG" Member="DMMAHANGs">
+    <Type Name="DMMAHANG">
+      <Column Name="MAMH" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mahangketoan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MAHANG_TINHGIA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TENMH" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NHOMHANG" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Donvidathang" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="MAU" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="Nhamaysx" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="SIZE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mahangnhapkhau" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BONG" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GHICHU" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MANV" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NGAYNHAP" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HIEULUC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LOAISP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TENHOPQUI" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MANVGC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GuiAPI" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NgayGuiAPI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HINHANH" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Barcode" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="qrcode" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="DMLOAISP_DMMAHANG" Member="DMLOAISP" ThisKey="LOAISP" OtherKey="LOAISP" Type="DMLOAISP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DMSIZE" Member="DMSIZEs">
+    <Type Name="DMSIZE">
+      <Column Name="SIZE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="KYTU15" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="KYTU11" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="TenSIZE" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="GHICHU" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="HIEULUC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="STT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Externalid" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_load_NetsuiteTT_Table_Mapping_MaHangSPM_MaKieuDang" Method="sp_load_NetsuiteTT_Table_Mapping_MaHangSPM_MaKieuDang">
+    <Parameter Name="maloaisp" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="loaisp" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_load_NetsuiteTT_Table_Mapping_MaHangSPM_MaKieuDangResult">
+      <Column Name="Externalid_MaKieuDang" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID_TT" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="LOAISP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Externalid_NhomMDSD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Externalid_LoaiSPMay" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_load_Tbl_Mapping_NguonGocSP_ThuongHieu" Method="sp_load_Tbl_Mapping_NguonGocSP_ThuongHieu">
+    <Parameter Name="nguongoc" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_load_Tbl_Mapping_NguonGocSP_ThuongHieuResult">
+      <Column Name="Externalid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID_TT" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Internalid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_mapping_nhamaysx_location" Method="sp_mapping_nhamaysx_location">
+    <Parameter Name="nhamay" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_mapping_nhamaysx_locationResult">
+      <Column Name="STT" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="externalid" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="parent" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="makho" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tenkho" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="loai" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID_nhamaysx" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_mapping_DanhMucLoaiKhachHang_PHANLOAIKHACHHANG" Method="sp_mapping_DanhMucLoaiKhachHang_PHANLOAIKHACHHANG">
+    <Parameter Name="loaikh" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_mapping_DanhMucLoaiKhachHang_PHANLOAIKHACHHANGResult">
+      <Column Name="LoaiKhachHang" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="KhachHang" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="HieuLuc" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastModifiedByID" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="LastModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="internalid_phanloaikh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_mapping_Donvidathang_Department" Method="sp_mapping_Donvidathang_Department">
+    <Parameter Name="donvidathang" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_mapping_Donvidathang_DepartmentResult">
+      <Column Name="internalid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="externalid" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="parent" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="idmadv" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="madv" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="idmacs" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mabp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="donvidathang" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_mapping_Donvidathang_Department_byidmacs" Method="sp_mapping_Donvidathang_Department_byidmacs">
+    <Parameter Name="idmacs" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_mapping_Donvidathang_Department_byidmacsResult">
+      <Column Name="internalid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="externalid" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="parent" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="idmadv" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="madv" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="idmacs" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mabp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="donvidathang" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_mapping_NetsuiteTT_TenHopQui" Method="sp_mapping_NetsuiteTT_TenHopQui">
+    <Parameter Name="kytudau" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="nhomsp" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_mapping_NetsuiteTT_TenHopQuiResult">
+      <Column Name="Externalid" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Loai" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="nhomsp" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="kytudau" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.api_erp_daymahang_SPM" Method="api_erp_daymahang_SPM">
+    <Parameter Name="manv" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="api_erp_daymahang_SPMResult">
+      <Column Name="MAMH" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NETSUITE_THUOCTINHMAHANG" Type="System.String" DbType="VarChar(22)" CanBeNull="true" />
+      <Column Name="MAHANG_LAYGIA" Type="System.String" DbType="VarChar(22)" CanBeNull="true" />
+      <Column Name="DonViTinh" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Maloaisp" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Kieusp" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="Nguongocsp" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="TenVai" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="SIZE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="TENLOAISP" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Donvidathang" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="MAU" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="Nhanhang" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="Nhamaysx" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="COGSACCOUNT" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="ASSETACCOUNT" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="INCOMEACCOUNT" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="NGAYNHAP" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HIEULUC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LOAISP" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="TENHOPQUI" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GUIAPI" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="NgayGuiAPIHD" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="manvmodify" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ngaymodify" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="NetsuiteTT" Class="NETSUITETTDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.2.182;Initial Catalog=NetsuiteTT;Persist Security Info=True;User ID=sa" SettingsObjectName="AutoSendCapNhapDH.Properties.Settings" SettingsPropertyName="NetsuiteTTConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Table_Mapping_Mavattu_DVT" Member="Table_Mapping_Mavattu_DVTs">
+    <Type Name="Table_Mapping_Mavattu_DVT">
+      <Column Name="Internalid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Externalid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DVT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TenDVT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="stt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_mapping_netsuite_gioitinh_sex" Method="sp_mapping_netsuite_gioitinh_sex">
+    <Parameter Name="code_sex" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="sp_mapping_netsuite_gioitinh_sexResult">
+      <Column Name="code_sex" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="decription" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="internalID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_mapping_loaispct" Method="sp_mapping_loaispct">
+    <Parameter Name="kytu1" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="maloaispct" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_mapping_loaispctResult">
+      <Column Name="externalid" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MaLoaiSPCT" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="PhanNhomSanPham" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Kytu1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

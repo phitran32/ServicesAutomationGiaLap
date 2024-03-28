@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="NotificationManagement">
+  <DataContextMoniker Name="/NotificationManagementDataContext" />
+  <nestedChildShapes>
+    <classShape Id="48cfd65d-332d-4ece-8c52-f671833933e3" absoluteBounds="5.25, 1.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/NotificationManagementDataContext/Template_AutomaticMail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6cc5db28-b81a-45ec-8b0c-f5542256285c" absoluteBounds="5.265, 2.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8335adcf-df51-40d3-97d8-49022367950c" absoluteBounds="1.875, 1.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/NotificationManagementDataContext/Email_SmtpClient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7d01d64-944f-4642-9d23-11dc81318bfa" absoluteBounds="1.8899999999999997, 1.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.875 : 2.44794840494792); (5.25 : 2.44794840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/NotificationManagementDataContext/Email_SmtpClient/Email_SmtpClient_Template_AutomaticMail" />
+      <nodes>
+        <classShapeMoniker Id="8335adcf-df51-40d3-97d8-49022367950c" />
+        <classShapeMoniker Id="48cfd65d-332d-4ece-8c52-f671833933e3" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

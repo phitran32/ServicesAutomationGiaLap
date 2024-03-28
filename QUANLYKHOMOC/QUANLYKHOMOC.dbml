@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QUANLYKHOMOC" Class="QUANLYKHOMOCDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.2.182;Initial Catalog=QUANLYKHOMOC;Persist Security Info=True;User ID=sa" SettingsObjectName="AutoSendCapNhapDH.Properties.Settings" SettingsPropertyName="QUANLYKHOMOCConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.spLoad_CayVaiKhongCoDonHang" Method="spLoad_CayVaiKhongCoDonHang">
+    <Parameter Name="IDMADV" Parameter="iDMADV" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="TuNgay" Parameter="tuNgay" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DenNgay" Parameter="denNgay" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="spLoad_CayVaiKhongCoDonHangResult">
+      <Column Name="Khoa1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Mahang" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Macay" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Mamay" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Soluong" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="SoLuongYard" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SLCatmau" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="Nguoikiem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Machatluong" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Raubien1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Raubien2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sobb" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Madh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ThiTruong" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GioBatDau" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GioKetThuc" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="KetThucCayMoc" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OLD" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NguoiNhap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LOIDAU" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ngaykiem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AttachFile_DSMahangKhongCoDonHang" Method="AttachFile_DSMahangKhongCoDonHang">
+    <ElementType Name="AttachFile_DSMahangKhongCoDonHangResult">
+      <Column Name="Khoa1" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Mahang" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Macay" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Mamay" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Soluong" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="SoLuongYard" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SLCatmau" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="Nguoikiem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Machatluong" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Raubien1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Raubien2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Sobb" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Madh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ThiTruong" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GioBatDau" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GioKetThuc" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="KetThucCayMoc" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OLD" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NguoiNhap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LOIDAU" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ngaykiem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="IDMADV" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

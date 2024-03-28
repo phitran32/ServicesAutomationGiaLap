@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="NETSUITETT">
+  <DataContextMoniker Name="/NETSUITETTDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1292f255-2193-4b7f-833b-d53022391e98" absoluteBounds="4.125, 2.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/NETSUITETTDataContext/Table_Mapping_Mavattu_DVT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cc3ad8d1-c124-4417-9983-872cc1fb8342" absoluteBounds="4.14, 2.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

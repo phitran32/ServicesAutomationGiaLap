@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLSANPHAMMAY2023">
+  <DataContextMoniker Name="/QLSANPHAMMAY2023DataContext" />
+  <nestedChildShapes>
+    <classShape Id="80fef3b6-355f-444d-b812-b14ac1094e1e" absoluteBounds="3.5, 1.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QLSANPHAMMAY2023DataContext/DMLOAISP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93705224-ecbb-48a4-9e1d-48c0f12672d5" absoluteBounds="3.515, 2.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4ec987a6-a5b8-4d10-9564-f08d43f51130" absoluteBounds="1.5, 2, 2, 5.2323225911458326">
+      <DataClassMoniker Name="/QLSANPHAMMAY2023DataContext/DMMAHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9da08908-c0f4-4358-8af4-d3a50f95e2cd" absoluteBounds="1.5150000000000001, 2.46, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.53125 : 3.45359537760417); (4.53125 : 5.342959484375); (3.5 : 5.342959484375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/QLSANPHAMMAY2023DataContext/DMLOAISP/DMLOAISP_DMMAHANG" />
+      <nodes>
+        <classShapeMoniker Id="80fef3b6-355f-444d-b812-b14ac1094e1e" />
+        <classShapeMoniker Id="4ec987a6-a5b8-4d10-9564-f08d43f51130" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="766c9347-6315-444f-8f5b-9a52fc63c186" absoluteBounds="0.75, 2.125, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/QLSANPHAMMAY2023DataContext/DMSIZE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1026cec5-897e-4621-b516-495bb16a81a9" absoluteBounds="0.765, 2.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
