@@ -18,12 +18,13 @@
 
 using System;
 using System.Net;
+using AutoSendCapNhapDH.com.netsuite.webservices;
 using System.Xml;
 using System.Security.Cryptography;
 using System.Configuration;
-using AutoSendCapNhapDH.com.netsuite.webservices;
+using ToolsApp;
 
-namespace ToolsApp
+namespace NSClient
 {
     /// <summary>
     /// Summary description for NSClient.
@@ -88,10 +89,10 @@ namespace ToolsApp
             DataCollection = System.Configuration.ConfigurationManager.AppSettings;
 
             //Decide between standard login and TBA
-            UseTba = "true".Equals("true");
+            UseTba = "true".Equals(ConfigurationManager.AppSettings["login.useTba"].ToString());
 
             // Instantiate the NetSuite web services
-            _service = new DataCenterAwareNetSuiteService("8687359_SB1", false);
+            _service = new DataCenterAwareNetSuiteService(ConfigurationManager.AppSettings["login.acct"].ToString(), false);
             _service.Timeout = 1000 * 60 * 60 * 2;
 
             //Enable cookie management
@@ -99,45 +100,7 @@ namespace ToolsApp
             _service.CookieContainer = new CookieContainer();
         }
 
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        //static void Main(string[] args)
-        //{
-        //    // Force TLS 1.2
-        //    System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 
-        //    // In order to enable SOAPscope to work through SSL. Refer to FAQ for more details
-        //    ServicePointManager.ServerCertificateValidationCallback += delegate (object sender, System.Security.Cryptography.X509Certificates.X509Certificate certificate, System.Security.Cryptography.X509Certificates.X509Chain chain, System.Net.Security.SslPolicyErrors sslPolicyErrors)
-        //    {
-        //        return true;
-        //    };
-
-        //    NSClient ns = null;
-        //    try
-        //    {
-        //        ns = new NSClient();
-        //        NSBase.Client = ns;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine("Error while loading the application:" + ex.Message);
-        //        Console.WriteLine("Press Enter to quit ... ");
-        //        Console.ReadKey();
-        //        return;
-        //    }
-
-        //}
-
-
-
-
-
-
-        /// <summary>
-        /// <p>This function builds the Pereferences and SearchPreferences in the SOAP header. </p>
-        /// </summary>
         public void SetPreferences()
         {
             // Set up request level preferences as a SOAP header
@@ -196,7 +159,6 @@ namespace ToolsApp
 
         public TokenPassport CreateTokenPassport()
         {
-
 
             string account = ConfigurationManager.AppSettings["login.acct"].ToString();
             string consumerKey = ConfigurationManager.AppSettings["login.tbaConsumerKey"].ToString();
@@ -338,7 +300,7 @@ namespace ToolsApp
     /// <summary>
     /// Base class of all implemented methods calling SuiteTalk 
     /// </summary>
-    class NSBase
+    public class NSBase
     {
         protected static NSClient _client;
 

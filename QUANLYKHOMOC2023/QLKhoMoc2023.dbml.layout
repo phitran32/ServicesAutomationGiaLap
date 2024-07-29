@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLKhoMoc2023">
+  <DataContextMoniker Name="/QLKhoMoc2023DataContext" />
+  <nestedChildShapes>
+    <classShape Id="3c8f6090-e64e-46fa-a929-880c36dcf192" absoluteBounds="6.625, 3, 2, 3.1170068359375">
+      <DataClassMoniker Name="/QLKhoMoc2023DataContext/dmNhomMay" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d2de09da-4891-46da-8045-793f77851d45" absoluteBounds="6.64, 3.46, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

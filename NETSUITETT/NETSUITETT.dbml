@@ -9,6 +9,35 @@
       <Column Name="stt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
     </Type>
   </Table>
+  <Table Name="dbo.Kho" Member="Khos">
+    <Type Name="Kho">
+      <Column Name="STT" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="externalid" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="parent" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="makho" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tenkho" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="loai" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID_nhamaysx" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IDMADV" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NHAMAY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KhoVai" Member="KhoVais">
+    <Type Name="KhoVai">
+      <Column Name="Externalid" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaKhoVai" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoaiSanPham" Member="LoaiSanPhams">
+    <Type Name="LoaiSanPham">
+      <Column Name="externalid" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="LoaiSanPham" Member="LoaiSanPham1" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="KyTu1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.sp_mapping_netsuite_gioitinh_sex" Method="sp_mapping_netsuite_gioitinh_sex">
     <Parameter Name="code_sex" Type="System.String" DbType="VarChar(10)" />
     <ElementType Name="sp_mapping_netsuite_gioitinh_sexResult">

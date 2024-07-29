@@ -8,5 +8,23 @@
         <elementListCompartment Id="cc3ad8d1-c124-4417-9983-872cc1fb8342" absoluteBounds="4.14, 2.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="84c195db-eff9-42a1-9236-8cc96dde3bdd" absoluteBounds="6.875, 1.875, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/NETSUITETTDataContext/Kho" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dfc4933b-182d-498e-aa4c-bf86238e16ec" absoluteBounds="6.89, 2.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1031a772-cc68-4fe7-b04e-82ac1ace7d2d" absoluteBounds="5.625, 5.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/NETSUITETTDataContext/KhoVai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e08b198e-7434-427c-8ab7-df47c63f07f5" absoluteBounds="5.64, 5.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9215ce64-0345-4f92-9125-b1745d2ec5cb" absoluteBounds="1.5, 4.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/NETSUITETTDataContext/LoaiSanPham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="387b2369-3652-4b02-a0d2-d9272db5c5c5" absoluteBounds="1.5149999999999997, 4.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

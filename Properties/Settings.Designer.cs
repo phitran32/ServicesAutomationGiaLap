@@ -109,5 +109,16 @@ namespace AutoSendCapNhapDH.Properties {
                 return ((string)(this["NetsuiteTTConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.2.182;Initial Catalog=QuanLyKhoMoc2023;User ID=sa;Password=99" +
+            "05376")]
+        public string QuanLyKhoMoc2023ConnectionString {
+            get {
+                return ((string)(this["QuanLyKhoMoc2023ConnectionString"]));
+            }
+        }
     }
 }

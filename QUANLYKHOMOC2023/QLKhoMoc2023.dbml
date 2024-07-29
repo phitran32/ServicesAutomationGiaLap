@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuanLyKhoMoc2023" Class="QLKhoMoc2023DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.2.182;Initial Catalog=QuanLyKhoMoc2023;User ID=sa" SettingsObjectName="AutoSendCapNhapDH.Properties.Settings" SettingsPropertyName="QuanLyKhoMoc2023ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.dmNhomMay" Member="dmNhomMays">
+    <Type Name="dmNhomMay">
+      <Column Name="Manhamay" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nhommay" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tennhommay" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Donvitinh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ghichu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Hieuluc" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Kieudet" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Manvcn" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ngaycn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Manvmodify" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ngaymodify" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_nhommay" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.Sp_API_Load_By_MH" Method="Sp_API_Load_By_MH">
+    <Parameter Name="Mahang" Parameter="mahang" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="Sp_API_Load_By_MHResult">
+      <Column Name="Mahang" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PvBanhang" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Madh" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="Bong" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MaHang_GC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Tentm" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Ngaybd" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Matdo" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="Tocdo" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="Khomoc" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="Beam" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="Nhomhang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DonViGiaCong" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Maphien" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgayNhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Manvhieuchinh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NgayHieuChinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Manvcapnhat" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nhommaydet" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID_mahang" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Tensanpham" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="Khovaimoc" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Bongnen" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="Loaimaydet" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Congnghedet" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="GUIAPI" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NgayGuiAPIHD" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Sp_Update_GuiAPI_MahangMOC" Method="Sp_Update_GuiAPI_MahangMOC">
+    <Parameter Name="mahangmoc" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

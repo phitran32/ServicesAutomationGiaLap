@@ -5,538 +5,181 @@ using System.Linq;
 using System.Web;
 
 namespace ToolsApp.Helper
-{
-    public class ENUM_ID
+{  
+    public static class CustomFieldRefScript
     {
-        #region CUSTOMFORM
-        public static class CUSTOMFORMID
-        {
-            #region TRANSACTION
-            //public const string TTPXKDonHangNhanGiaCong = "198";
-            public const string TTASSEMBLYBUILD_ASSEMBLY="155";
-            public const string TTHOADONMUAHANGDICHVU_BILL="122";
-            public const string TTCASHREFUND_REFUND="115";
-            public const string TTCASHSALES_SALE="114";
-            public const string TTCREDITMEMO_XUATKHAU_CREDITMEM="147";
-            public const string TTCREDITMEMO_NOIDIA_CREDITMEM="126";
-            public const string TTGIATUI_TSCT_DIEUCHINHTANG_GIAM_IAD="161";
-            public const string TTDIEUCHINHTON_IAD="152";
-            public const string TTDIEUCHINHCHUYENMATANG_IAD="145";
-            public const string TTIAXUATDONGPHUC_BIEUTANG_KHUYENMAI_IAD="129";
-            public const string TTNHANGIACONGTAISANKHACHHANG_IAD="128";
-            public const string TTDIEUCHINHCHUYENMAGIAM_IAD="119";
-            public const string TTGHINHANHANGMUAGIACONG_IAD="107";
-            public const string TTPXKTHMUAHANGGIACONG_IAD="106";
-            public const string TTGIATUI_TSCT_THIETLAPKHAUHAO_IAD="103";
-            public const string TTDIEUCHINHKHOLUUDONG_IAD="143";
-            public const string TTDIEUCHUYENNOIBO_INVTRANS="104";
-            public const string TTGIATUI_NHANHANGCHOTHUEVETUKHACH_INVTRANS="159";
-            public const string TTGIATUI_DIEUCHUYENHANGCHOTHUE_INVTRANS="118";
-            public const string TTXUATDONGPHUC_BIEUTANG_KHUYENMAI_INVOICE="142";
-            public const string TTHOADONBANHANGNOIDIA_INVOICE="116";
-            public const string TTSTANDARDPRODUCTINVOICENOIDIA_INVOICE="173";
-            public const string TTHOADONGIATUI_INVOICE="171";
-            public const string TTPRODUCTINVOICE_XUATKHAU_INVOICE="110";
-            public const string TTPXKDONBANDICHVU_GIACONGTHUONGMAI_IFF="108";
-            public const string TTPXKDONHANGXUATKHAU_IFF="111";
-            public const string TTPXKGIATUI_TAISANKHACHHANG_IFF="117";
-            public const string TTPXKDONHANGNHANGIACONG_IFF="120";
-            public const string TTPXKTHTRAHANGMUANHAPKHAU_IFF="123";
-            public const string TTPXKGIATUI_TAISANCONGTY_IFF="132";
-            public const string TTPXKTHTRAHANGMUANOIDIA_IFF="146";
-            public const string TTPXKDONHANGLUUDONG_IFF="153";
-            public const string TTPXKDONHANGNOIDIA_IFF="156";
-            public const string TTPXKVANCHUYENNOIBO_IFF="164";
-            public const string TTPNKMUAHANGNHAPKHAU_IRR="109";
-            public const string TTPNKHANGBITRALAINOIDIA_IRR="144";
-            public const string TTPNKVANCHUYENNOIBO_IRR="134";
-            public const string TTPNKMUAHANGNOIDIA_IRR="127";
-            public const string TTJEPRIMSINTEGRATION_JOURNAL="160";
-            public const string TTGHINHANKHOANVAY_JOURNAL="149";
-            public const string TTDONHANGMUADICHVU_PO="125";
-            public const string TTDONHANGMUANOIDIA_PO="133";
-            public const string TTDONHANGMUANHAPKHAU_PO="136";
-            public const string TTDONHANGMUAGIACONG_PO="157";
-            public const string TTRETURNAUTHORIZATION_CASH_NOIDIA_RETURN="137";
-            public const string TTRETURNAUTHORIZATION_CREDIT_NOIDIA_RETURN="166";
-            public const string TTRETURNAUTHORIZATION_CREDIT_XUATKHAU_RETURN="135";
-            public const string TTDONBANGIATUI_TAISANKHACHHANG_SO="105";
-            public const string TTDONHANGLUUDONG_SO="121";
-            public const string TTDONHANGXUATKHAUMAY_SO="130";
-            public const string TTDONHANGNOIDIA_SO="131";
-            public const string TTPOSDONHANGSI_CONGSO_CONGNGHIEP_SO="141";
-            public const string TTDONHANGNHANGIACONG_SO="154";
-            public const string TTDONBANDICHVU_GIACONGTHUONGMAI_SO="158";
-            public const string TTDONBANGIATUI_TAISANCONGTY_SO="162";
-            public const string TTDONHANGXUATKHAUNHUOM_SO="165";
-            public const string TTPOSDONHANGKHACHLE_SO="169";
-            public const string TTDONHANGXUATKHAUDET_SO="170";
-            public const string TTVANCHUYENNOIBO_TO="113";
-            public const string TTDONTRAHANGNHAPKHAU_VENRETURN="124";
-            public const string TTDONTRAHANGNOIDIA_VENRETURN="112";
-            public const string TTDONTRAHANGGIACONG_VENRETURN="167";
-            public const string TTWORKORDER_WO="172";
 
-            #endregion
-
-            #region FORM
-            public const string TTVATTU = "44";
-            public const string TTPHUKIEN = "45";
-            public const string TTVAITHANHPHAM = "46";
-            public const string TTGIAYDEP = "47";
-            public const string TTQUANAONOIDIA = "52";
-            public const string TTGIACONG = "53";
-            public const string TTVAIMOC = "54";
-            public const string TTMAYKHAC = "57";
-            public const string TTDICHVUGIATUI = "49";
-            public const string TTDICHVUMAYDO = "62";
-            public const string TTQUANAOXUATKHAU = "68";
-            public const string TTNHUONGQUYEN = "69";
-            public const string TTPHUTRANG = "70";
-            public const string TTVATTU_INVENTORY = "67";
-            public const string TTPHUKIEN_INVENTORY = "66";
-            public const string TTVAITHANHPHAM_INVENTORY = "64";
-            public const string TTQUANAONOIDIA_INVENTORY = "61";
-            public const string TTGIAYDEP_INVENTORY = "56";
-            public const string TTVAIMOC_INVENTORY = "65";
-            public const string TTSANPHAMGIATUI_INVENTORY = "51";
-            public const string TTDICHVUMAYDO_INVENTORY = "48";
-            public const string TTQUANAOXUATKHAU_INVENTORY = "60";
-            public const string TTNHUONGQUYEN_INVENTORY = "50";
-            public const string TTDICHVUGIATUI_NON_INVENTORY = "55";
-            #endregion
-        }
-        #endregion
-
-        #region CUSTOMRECORD
-        public static class CUSTOMRECORDID
-        {
-            public const string NHOMSANPHAM = "231";
-            public const string KICHCO = "302";
-            public const string MAMAUVAI = "249";
-            public const string RPProductGroup = "322"; //RP Product Group
-            public const string RPProductClass = "294"; //RP Product Class
-        }
-        #endregion
-
-        #region TINHTRANGDONHANG
-        public static class TINHTRANGDONHANG
-        {
-            /// <summary>
-            /// 1: Đơn hàng mới
-            /// 2: Đang sản xuất
-            /// 3: Kết thúc
-            /// </summary>
-            /// <param name="HL_TBP"></param>
-            /// <param name="HL_DP"></param>
-            /// <param name="date"></param>
-            /// <returns></returns>
-            public static String TinhTrangDH(bool HL_TBP, bool HL_DP, DateTime? date)
-            {
-                string tinhtrang = "";
-                if (!HL_TBP && !HL_DP)
-                {
-                    tinhtrang = "1";
-                }
-                if (HL_TBP && !HL_DP)
-                {
-                    tinhtrang = "1";
-                }
-                if (HL_TBP && !HL_DP)
-                {
-                    tinhtrang = "1";
-                }
-                if (HL_TBP && HL_DP)
-                {
-                    tinhtrang = "2";
-                    if (date.Value.AddDays(3) >= DateTime.Now)
-                    {
-                        tinhtrang = "3";
-                    }
-                }
-                return tinhtrang;
-            }
-        }
-        #endregion
-
-        #region LOAIYEUCAUSANXUAT
-        public static class LOAIYEUCAUSANXUAT
-        {
-            public const string GIACONG = "2";
-            public const string SANXUAT = "1";
-        }
-        #endregion
-
-        #region LOAIKHOATHAITUAN
-        public static class LOAIKHOATHAITUAN
-        {
-            public const string KeyHH = "1";
-            public const string KhoaTinhVatTu = "2";
-            public const string IdKhoaGiaThanh = "3";
-        }
-        #endregion
-
-        #region UNITSOFMEASURE
-        public static class UNITSOFMEASURE
-        {
-            public const string MET = "50";
-        }
-        #endregion
-
-        #region TAXCODE
-        public static class TAXCODE
-        {
-            public const string UNDEF_VN = "5";
-            public const string Z_VN_XK_Cty = "6";
-            public const string Z_VN_NĐ_MT = "7";
-            public const string Z_VN_NĐ_MB = "8";
-            public const string Z_VN_NĐ_Cty = "9";
-            public const string Z_VN_NK_Cty = "10";
-            public const string S_VN_NĐ_MT8per = "11";
-            public const string S_VN_NĐ_MT10per = "12";
-            public const string S_VN_NĐ_MB8per = "13";
-            public const string S_VN_NĐ_MB10per = "14";
-            public const string S_VN_NĐ_Cty8per = "15";
-            public const string S_VN_NĐ_Cty10per = "16";
-            public const string S_VN_NK_Cty8per = "17";
-            public const string S_VN_NK_Cty10per = "18";
-            public const string S_FA_VN_8per = "19";
-            public const string S_FA_VN_10per = "20";
-            public const string E_VN_NĐ_MT = "21";
-            public const string E_VN_NĐ_MB = "22";
-            public const string E_VN_NĐ_Cty = "23";
-            public const string E_VN_NK_Cty = "24";
-
-        }
-        #endregion
-
-        #region CHART OF ACCOUNT (COA)
-        public static class COA
-        {
-            public static class COGS
-            {
-                public const string GIAVON_BANRA = "935"; //id:935 num:6321 Giá vốn hàng bán ra
-            }
-            public static class ASSET
-            {
-                public const string HANGHOA_THUONGMAI = "1878"; //id:401 num:15613 Hàng hóa: Thương mại      // id:1878	156139 Hàng hóa MN: Hàng nhượng quyền
-            }
-            public static class INCOME
-            {
-                public const string DT_BANHANGHOA_THUONGMAI = "653"; //id:653 num:51111 Doanh thu bán hàng hoá TM
-                public const string DT_BANHANGHOA_THUONGMAI_ND = "541"; //511111: DThu HHóa: Hàng TM NĐịa
-                public const string DT_BANHANGHOA_THUONGMAI_XK = "542"; //511112: DThu HHóa: Hàng TM XKhẩu
-            }
-        }
-        #endregion
-
-        #region LOẠI ĐƠN HÀNG MMXK
-        public static class LOAIDONHANGMMXK
-        {
-            public const string FOB = "1";
-            public const string CM = "2";
-        }
-        #endregion
-
-        #region GỬI API STATUS
-        public static class GUIAPI
-        {
-            public const string MOI = "1";
-            public const string CAPNHAT = "2";
-            public const string HUYBO = "3";
-        }
-        #endregion
-
-        #region DUNG SAI 
-        public static class DUNGSAI
-        {
-            public const string FIVEPERCENT = "1";
-            public const string TENPERCENT = "2";
-        }
-        #endregion
-
-        #region PHẠM VI
-        public static class PHAMVI
-        {
-            public const string XK = "1";
-            public const string ND = "2";
-        }
-        #endregion
-
-        #region NGUỒN GỐC VẢI
-        public static class NGUONGOCVAI
-        {
-            public const string CONGTY = "1";
-            public const string KHACHHANG = "2";
-        }
-        #endregion
-
-        #region Phân Loại Phiếu Điều Chỉnh Kho
-        public static class PHANLOAIPHIEUDCKHO
-        {
-            public const string CHUYEN_MA = "2";
-            public const string XUAT_KHO_SOI_GIA_CONG = "3";
-            public const string NHAP_KHO_THANH_PHAM_SAN_XUAT = "4";
-            public const string NHAP_KHO_THANH_PHAM_GIA_CONG = "5";
-            public const string DIEU_CHINH_TON = "6";
-            public const string XUAT_KHO_GHI_NHAN_CHI_PHI_TRONG_KY = "7";
-            public const string KIEM_KE_PHAT_HIEN_THUA_THIEU = "8";
-            public const string HOI_KHO_THANH_PHAM_KHONG_DAT_CHAT_LUONG = "9";
-            public const string XUAT_KHO_NVL_SX_LEN_CHUYEN = "10";
-            public const string HOI_KHO_NVL_SOI_GC_DE_BAN_LUAN_CHUYEN_NOI_BO = "11";
-            public const string GOP_VON = "12";
-            public const string GIAT_UI_TSCTY_DIEU_CHINH_TANG_CHO_THUE = "13";
-            public const string GIAT_UI_TSCTY_DIEU_CHINH_TANG_GIAM = "14";
-            public const string GIA_CONG_NHAP_KHO_TAI_SAN_KHACH_HANG = "15";
-            public const string GIA_CONG_XUAT_KHO_THANH_PHAM_GIAO_HANG = "16";
-            public const string XUAT_KHO_VAT_TU_DEM_DI_GIA_CONG = "17";
-
-        }
-        #endregion
-
-        #region Phân Loại Phiếu Vận chuyển nội bộ
-        public static class PHANLOAIPHIEUVCNB
-        {
-            public const string YEU_CAU = "2";
-            public const string HOI_KHO = "1";
-            public const string CHO_MUON = "3";
-            public const string CHO_THUE_GIAT_UI = "5";
-            public const string BAN_HANG_LUU_DONG = "6";
-            public const string DIEU_CHUYEN_NOI_BO_THEO_DNMH = "4";
-
-        }
-        #endregion
-
-        #region TRANSACTION TYPEs
-        public static class TRANSACTIONTYPE
-        {
-            public const string PURCHASEORDER = "purchaseOrder";
-            public const string SALESORDER = "salesOrder";
-        }
-        #endregion
-
-        #region PRICE LEVELS
-        public static class PRICELEVEL
-        {
-            public const string BASEPRICE = "1";
-            public const string GIABANLE = "11";
-            public const string GIADAILYMIENBAC = "3";
-            public const string GIADAILYMIENNAM = "2";
-            public const string GIADAILYMIENTRUNG = "4";
-            public const string MUCGIASI = "6";
-            public const string MUCGIALUUDONG = "7";
-            public const string RETAILPRICE = "8";
-        }
-        #endregion
+        public static string custbody_btm_tt_ma_so_hd { get { return "custbody_btm_tt_ma_so_hd"; } }
+        public static string cseg_btm_tt_khu_vuc { get { return "cseg_btm_tt_khu_vuc"; } }
+        public static string custcol_btm_tt_ma_kh_dat { get { return "custcol_btm_tt_ma_kh_dat"; } }
+        public static string custbody_btm_tt_loai_vai { get { return "custbody_btm_tt_loai_vai"; } }
+        public static string custbody_btm_tt_so_approver { get { return "custbody_btm_tt_so_approver"; } }
+        public static string custbody_btm_tt_cang_den { get { return "custbody_btm_tt_cang_den"; } }
+        public static string csegbtm_tt_thi_tr { get { return "csegbtm_tt_thi_tr"; } }
+        public static string custbody_btm_tt_co_hao_lt_gc { get { return "custbody_btm_tt_co_hao_lt_gc"; } }
+        public static string custbody_btm_tt_ty_le_hh_trien_khai { get { return "custbody_btm_tt_ty_le_hh_trien_khai"; } }
+        public static string custbody_btm_tt_phan_tram_hoa_hong_gd { get { return "custbody_btm_tt_phan_tram_hoa_hong_gd"; } }
+        public static string custbody_btm_tt_nguon_nvl { get { return "custbody_btm_tt_nguon_nvl"; } }
+        public static string custbody_btm_tt_gm { get { return "custbody_btm_tt_gm"; } }
+        public static string custbody_btm_tt_gm_trien_khai_percent { get { return "custbody_btm_tt_gm_trien_khai_percent"; } }
+        public static string custbody_btm_tt_tong_mau { get { return "custbody_btm_tt_tong_mau"; } }
+        public static string custbody_btm_tt_loai_sx { get { return "custbody_btm_tt_loai_sx"; } }
+        public static string custrecord_btm_tt_don_yc_m_parent { get { return "custrecord_btm_tt_don_yc_m_parent"; } }
+        public static string custrecord_btm_tt_status_manu { get { return "custrecord_btm_tt_status_manu"; } }
+        public static string custrecord_btm_tt_bill_of_materials_revi { get { return "custrecord_btm_tt_bill_of_materials_revi"; } }
+        public static string custrecord_btm_tt_bill_of_materials { get { return "custrecord_btm_tt_bill_of_materials"; } }
+        public static string custrecord_btm_tt_ma_nhom_soi_bom { get { return "custrecord_btm_tt_ma_nhom_soi_bom"; } }
+        public static string custrecord_btm_tt_kl_hao_hut { get { return "custrecord_btm_tt_kl_hao_hut"; } }
+        public static string custrecord_btm_tt_kl_khong_hao_hut { get { return "custrecord_btm_tt_kl_khong_hao_hut"; } }
+        public static string custrecord_btm_tt_hs_at { get { return "custrecord_btm_tt_hs_at"; } }
+        public static string custbody_btm_tt_loai_sp { get { return "custbody_btm_tt_loai_sp"; } }
+        public static string custrecord_btm_tt_bpsx { get { return "custrecord_btm_tt_bpsx"; } }
+        public static string custrecord_btm_tt_mnsx { get { return "custrecord_btm_tt_mnsx"; } }
+        public static string custrecord_btm_tt_ma_loai_vai { get { return "custrecord_btm_tt_ma_loai_vai"; } }
+        public static string custrecord_btm_tt_gia_thanh_kh_tam { get { return "custrecord_btm_tt_gia_thanh_kh_tam"; } }
+        public static string custrecord_btm_tt_loi_dau_tam { get { return "custrecord_btm_tt_loi_dau_tam"; } }
+        public static string custrecord_btm_tt_so_bien_ban_tam { get { return "custrecord_btm_tt_so_bien_ban_tam"; } }
+        public static string custrecord_btm_tt_raubien1_tam { get { return "custrecord_btm_tt_raubien1_tam"; } }
+        public static string custrecord_btm_tt_raubien2_tam { get { return "custrecord_btm_tt_raubien2_tam"; } }
+        public static string custrecord_btm_tt_nguoi_kiem_tam { get { return "custrecord_btm_tt_nguoi_kiem_tam"; } }
+        public static string custrecord_btm_tt_sl_yard_tam { get { return "custrecord_btm_tt_sl_yard_tam"; } }
+        public static string custrecord_btm_tt_sl_cat_mau_tam { get { return "custrecord_btm_tt_sl_cat_mau_tam"; } }
+        public static string custrecord_btm_tt_ma_chat_luong_tam { get { return "custrecord_btm_tt_ma_chat_luong_tam"; } }
+        public static string custrecord_btm_tt_sl_thanh_pham { get { return "custrecord_btm_tt_sl_thanh_pham"; } }
+        public static string custrecord_btm_tt_ngay_sx { get { return "custrecord_btm_tt_ngay_sx"; } }
+        public static string custrecord_btm_tt_gio_bat_dau { get { return "custrecord_btm_tt_gio_bat_dau"; } }
+        public static string custrecord_btm_tt_gio_ket_thuc { get { return "custrecord_btm_tt_gio_ket_thuc"; } }
+        public static string custrecord_btm_tt_kt_cay_moc { get { return "custrecord_btm_tt_kt_cay_moc"; } }
+        public static string custrecord_btm_tt_mh_tp { get { return "custrecord_btm_tt_mh_tp"; } }
+        public static string custrecord_btm_tt_lot_serial_number { get { return "custrecord_btm_tt_lot_serial_number"; } }
+        public static string custrecord_btm_tt_m_dh_yc_sx { get { return "custrecord_btm_tt_m_dh_yc_sx"; } }
+        public static string custrecord_btm_tt_dyc_m_bpsx { get { return "custrecord_btm_tt_dyc_m_bpsx"; } }
+        public static string custrecord_btm_tt_dyc_m_mnsx { get { return "custrecord_btm_tt_dyc_m_mnsx"; } }
+        public static string custrecord_btm_tt_dyc_m_qcdh { get { return "custrecord_btm_tt_dyc_m_qcdh"; } }
+        public static string custrecord_btm_tt_dyc_m_loai_bao_bi { get { return "custrecord_btm_tt_dyc_m_loai_bao_bi"; } }
+        public static string custrecord_btm_tt_dyc_m_nhom_dong_goi { get { return "custrecord_btm_tt_dyc_m_nhom_dong_goi"; } }
+        public static string custrecord_btm_tt_dyc_m_ngay_cap_nhat { get { return "custrecord_btm_tt_dyc_m_ngay_cap_nhat"; } }
+        public static string custrecord_btm_tt_dyc_m_loai_yc { get { return "custrecord_btm_tt_dyc_m_loai_yc"; } }
+        public static string custrecord_btm_tt_dyc_m_kho_may_det { get { return "custrecord_btm_tt_dyc_m_kho_may_det"; } }
+        public static string custrecord_btm_tt_dyc_m_hang_tp { get { return "custrecord_btm_tt_dyc_m_hang_tp"; } }
+        public static string custrecord_btm_tt_dyc_m_ma_nv_cap_nhat { get { return "custrecord_btm_tt_dyc_m_ma_nv_cap_nhat"; } }
+        public static string custrecord_btm_tt_dyc_m_loai_bong { get { return "custrecord_btm_tt_dyc_m_loai_bong"; } }
+        public static string custrecord_btm_tt_dyc_m_loai_may_det { get { return "custrecord_btm_tt_dyc_m_loai_may_det"; } }
+        public static string custrecord_btm_tt_dyc_m_do_co_nhuom { get { return "custrecord_btm_tt_dyc_m_do_co_nhuom"; } }
+        public static string custrecord_btm_tt_dyc_m_mn { get { return "custrecord_btm_tt_dyc_m_mn"; } }
+        public static string custrecord_btm_tt_dyc_m_sl_yc { get { return "custrecord_btm_tt_dyc_m_sl_yc"; } }
+        public static string custrecord_btm_tt_dyc_m_sl_dieu_bo { get { return "custrecord_btm_tt_dyc_m_sl_dieu_bo"; } }
+        public static string custrecord_btm_tt_dyc_m_ma_hang_kd { get { return "custrecord_btm_tt_dyc_m_ma_hang_kd"; } }
+        public static string custrecord_btm_tt_dyc_m_ma_dinh_muc { get { return "custrecord_btm_tt_dyc_m_ma_dinh_muc"; } }
+        public static string custbody_btm_tt_phan_loai_dieu_chinh { get { return "custbody_btm_tt_phan_loai_dieu_chinh"; } }
+        public static string cseg_btm_tt_pv_bh { get { return "cseg_btm_tt_pv_bh"; } }
+        public static string custbody_btm_tt_nguon_goc { get { return "custbody_btm_tt_nguon_goc"; } }
+        public static string custbody_btm_tt_nguon_goc_hang { get { return "custbody_btm_tt_nguon_goc_hang"; } }
+        public static string custbody_btm_tt_loai_don_hang_gia_cong { get { return "custbody_btm_tt_loai_don_hang_gia_cong"; } }
+        public static string custitemnumber_btm_tt_ngay_sx { get { return "custitemnumber_btm_tt_ngay_sx"; } }
+        public static string custitemnumber_btm_tt_loai_vai_luu_dong { get { return "custitemnumber_btm_tt_loai_vai_luu_dong"; } }
+        public static string custitemnumber_btm_tt_ma_qc { get { return "custitemnumber_btm_tt_ma_qc"; } }
+        public static string custitemnumber_btm_tt_loai_chat_luong { get { return "custitemnumber_btm_tt_loai_chat_luong"; } }
+        public static string custitemnumber_btm_tt_ma_loi { get { return "custitemnumber_btm_tt_ma_loi"; } }
+        public static string custitemnumber_btm_tt_loi_chi_tiet { get { return "custitemnumber_btm_tt_loi_chi_tiet"; } }
+        public static string custbody_btm_tt_loai_phieu_van_chuyen { get { return "custbody_btm_tt_loai_phieu_van_chuyen"; } }
+        public static string custbody_btm_tt_chung_tu_tham_chieu { get { return "custbody_btm_tt_chung_tu_tham_chieu"; } }
+        public static string custcol_btm_tt_don_yc_nhuom { get { return "custcol_btm_tt_don_yc_nhuom"; } }
+        public static string custrecord_btm_tt_ma_mau_danh_muc { get { return "custrecord_btm_tt_ma_mau_danh_muc"; } }
+        public static string custrecord_btm_tt_nhom_sp_ma { get { return "custrecord_btm_tt_nhom_sp_ma"; } }
+        public static string custrecord_btm_tt_nhom_sp_phan_loai { get { return "custrecord_btm_tt_nhom_sp_phan_loai"; } }
+        public static string custitem_btm_tt_nguon_goc_hang { get { return "custitem_btm_tt_nguon_goc_hang"; } }
+        public static string custitem_btm_tt_bong_in { get { return "custitem_btm_tt_bong_in"; } }
+        public static string custitem_btm_tt_nhom_hoa_van_det_in { get { return "custitem_btm_tt_nhom_hoa_van_det_in"; } }
+        public static string custitem_btm_tt_nhom_trang_phuc { get { return "custitem_btm_tt_nhom_trang_phuc"; } }
+        public static string custitem_btm_tt_nhom_san_pham { get { return "custitem_btm_tt_nhom_san_pham"; } }
+        public static string custitem_btm_tt_loai_san_pham { get { return "custitem_btm_tt_loai_san_pham"; } }
+        public static string custitem_btm_tt_bong_nen_vai { get { return "custitem_btm_tt_bong_nen_vai"; } }
+        public static string custitem_btm_tt_loai_may_det { get { return "custitem_btm_tt_loai_may_det"; } }
+        public static string custitem_btm_tt_cong_nghe_det { get { return "custitem_btm_tt_cong_nghe_det"; } }
+        public static string custitem_btm_tt_nhom_cong_nghe { get { return "custitem_btm_tt_nhom_cong_nghe"; } }
+        public static string custitem_btm_tt_cap_mau_nhuom_in { get { return "custitem_btm_tt_cap_mau_nhuom_in"; } }
+        public static string custitem_btm_tt_nhom_sp_kinh_doanh { get { return "custitem_btm_tt_nhom_sp_kinh_doanh"; } }
+        public static string custitem_btm_tt_kho_vai_moc { get { return "custitem_btm_tt_kho_vai_moc"; } }
+        public static string custitem_btm_tt_ma_mau { get { return "custitem_btm_tt_ma_mau"; } }
+        public static string custitem_btm_tt_loai_vai { get { return "custitem_btm_tt_loai_vai"; } }
+        public static string custitem_btm_tt_ten_sp_hop_quy { get { return "custitem_btm_tt_ten_sp_hop_quy"; } }
+        public static string custitem_btm_tt_kl_gm2 { get { return "custitem_btm_tt_kl_gm2"; } }
+        public static string custitem_btm_tt_kho_thuc_te { get { return "custitem_btm_tt_kho_thuc_te"; } }
+        public static string custbody_btm_po_gia_cong { get { return "custbody_btm_po_gia_cong"; } }
+        public static string custrecord_btm_tt_don_yc_loai { get { return "custrecord_btm_tt_don_yc_loai"; } }
+        public static string custrecord_btm_tt_don_yc_bo_phan { get { return "custrecord_btm_tt_don_yc_bo_phan"; } }
+        public static string custrecord_btm_tt_don_yc_nguoi { get { return "custrecord_btm_tt_don_yc_nguoi"; } }
+        public static string custrecord_btm_tt_don_yc_ngay { get { return "custrecord_btm_tt_don_yc_ngay"; } }
+        public static string custrecord_btm_tt_don_yc_bo_phan_sx { get { return "custrecord_btm_tt_don_yc_bo_phan_sx"; } }
+        public static string custrecord_btm_tt_don_yc_nha_may_sx { get { return "custrecord_btm_tt_don_yc_nha_may_sx"; } }
+        public static string custrecord_btm_tt_don_yc_ma_dh { get { return "custrecord_btm_tt_don_yc_ma_dh"; } }
+        public static string custrecord_btm_tt_don_yc_tt_don_hang { get { return "custrecord_btm_tt_don_yc_tt_don_hang"; } }
+        public static string custrecord_btm_tt_don_yc_thi_truong { get { return "custrecord_btm_tt_don_yc_thi_truong"; } }
+        public static string custrecord_btm_tt_don_yc_date_start { get { return "custrecord_btm_tt_don_yc_date_start"; } }
+        public static string custrecord_btm_tt_don_yc_date_end { get { return "custrecord_btm_tt_don_yc_date_end"; } }
+        public static string custrecord_btm_tt_don_yc_in_parent { get { return "custrecord_btm_tt_don_yc_in_parent"; } }
+        public static string custrecord_btm_tt_don_yc_in_sl_yc { get { return "custrecord_btm_tt_don_yc_in_sl_yc"; } }
+        public static string custrecord_btm_tt_don_yc_in_ma_mat_hang { get { return "custrecord_btm_tt_don_yc_in_ma_mat_hang"; } }
+        public static string custrecord_btm_tt_don_yc_in_loai_hang { get { return "custrecord_btm_tt_don_yc_in_loai_hang"; } }
+        public static string custrecord_btm_tt_don_yc_in_ms_quy_trinh { get { return "custrecord_btm_tt_don_yc_in_ms_quy_trinh"; } }
+        public static string custrecord_btm_tt_don_yc_in_ma_mau { get { return "custrecord_btm_tt_don_yc_in_ma_mau"; } }
+        public static string custrecord_btm_tt_don_yc_in_mm_kinh_doan { get { return "custrecord_btm_tt_don_yc_in_mm_kinh_doan"; } }
+        public static string custrecord_btm_tt_don_yc_in_mk_gia_thanh { get { return "custrecord_btm_tt_don_yc_in_mk_gia_thanh"; } }
+        public static string custrecord_btm_tt_don_yc_in_mnxn_khoa { get { return "custrecord_btm_tt_don_yc_in_mnxn_khoa"; } }
+        public static string custrecord_btm_tt_don_yc_in_sl_da_xem_x { get { return "custrecord_btm_tt_don_yc_in_sl_da_xem_x"; } }
+        public static string custrecord_btm_tt_don_yc_in_date_start { get { return "custrecord_btm_tt_don_yc_in_date_start"; } }
+        public static string custrecord_btm_tt_don_yc_in_date_end { get { return "custrecord_btm_tt_don_yc_in_date_end"; } }
+        public static string custrecord_btm_tt_don_yc_in_loai_dh { get { return "custrecord_btm_tt_don_yc_in_loai_dh"; } }
+        public static string custrecord_btm_tt_don_yc_in_ma_cn_in { get { return "custrecord_btm_tt_don_yc_in_ma_cn_in"; } }
+        public static string custrecord_btm_tt_don_yc_in_chuyen_kho { get { return "custrecord_btm_tt_don_yc_in_chuyen_kho"; } }
+        public static string custrecord_btm_tt_don_yc_vtp_parent { get { return "custrecord_btm_tt_don_yc_vtp_parent"; } }
+        public static string custrecord_btm_tt_don_yc_loai_sx { get { return "custrecord_btm_tt_don_yc_loai_sx"; } }
+        public static string custrecord_btm_tt_don_yc_vtp_loai_hang { get { return "custrecord_btm_tt_don_yc_vtp_loai_hang"; } }
+        public static string custrecord_btm_tt_don_yc_vtp_ma_kh_dat { get { return "custrecord_btm_tt_don_yc_vtp_ma_kh_dat"; } }
+        public static string custrecord_btm_tt_don_yc_vtp_ms_quy_trin { get { return "custrecord_btm_tt_don_yc_vtp_ms_quy_trin"; } }
+        public static string custrecord_btm_tt_don_yc_vtp_ma_mau { get { return "custrecord_btm_tt_don_yc_vtp_ma_mau"; } }
+        public static string custrecord_btm_tt_don_yc_vtp_mm_kd { get { return "custrecord_btm_tt_don_yc_vtp_mm_kd"; } }
+        public static string custrecord_btm_tt_don_yc_vtp_mk_gia_than { get { return "custrecord_btm_tt_don_yc_vtp_mk_gia_than"; } }
+        public static string custrecord_btm_tt_don_yc_vtp_mnv_xn_khoa { get { return "custrecord_btm_tt_don_yc_vtp_mnv_xn_khoa"; } }
+        public static string custrecord_btm_tt_don_yc_vtp_sl_yc { get { return "custrecord_btm_tt_don_yc_vtp_sl_yc"; } }
+        public static string custrecord_btm_tt_don_yc_vtp_sl_da_xem_x { get { return "custrecord_btm_tt_don_yc_vtp_sl_da_xem_x"; } }
+        public static string custrecord_btm_tt_don_yc_vtp_loai_dh { get { return "custrecord_btm_tt_don_yc_vtp_loai_dh"; } }
+        public static string custrecord_btm_tt_don_yc_vtp_mcn_nhuom { get { return "custrecord_btm_tt_don_yc_vtp_mcn_nhuom"; } }
+        public static string custrecord_btm_tt_don_yc_vtp_chuyen_kho { get { return "custrecord_btm_tt_don_yc_vtp_chuyen_kho"; } }
+        public static string custrecord_btm_tt_ma_khoa { get { return "custrecord_btm_tt_ma_khoa"; } }
+        public static string custrecord_btm_tt_loai_khoa { get { return "custrecord_btm_tt_loai_khoa"; } }
+        public static string custrecord_btm_tt_ngay_day_api { get { return "custrecord_btm_tt_ngay_day_api"; } }
+        public static string custrecord_btm_tt_don_yc_gui_apihd { get { return "custrecord_btm_tt_don_yc_gui_apihd"; } }
+        public static string custcol_btm_line_key { get { return "custcol_btm_line_key"; } }
+    }
+    public static class TrangThaiDonYeuCauSX
+    {
+        public static string Moi { get { return "1"; } }
+        public static string DangSanXuat { get { return "2"; } }
+        public static string KetThuc { get { return "3"; } }
     }
 
-    public class CUSTOMSEARCH
+    public static class ThiTruong
     {
-        #region CUSTOMER SEARCH
-
-        public static string SEARCH_CUSTOMER_INTERNALID(string name_search, string externalid)
-        {
-            NSClient ns = new NSClient();
-
-            string customerId = "";
-            CustomerSearch customerSearch = new CustomerSearch();
-            customerSearch.basic = new CustomerSearchBasic
-            {
-                entityId = new SearchStringField
-                {
-                    @operator = SearchStringFieldOperator.contains,
-                    operatorSpecified = true,
-                    searchValue = name_search
-                }
-            };
-
-            // Execute the search
-            SearchResult result = ns.Service.search(customerSearch);
-            if (result.status.isSuccess)
-            {
-                if (result.recordList.Count() > 0)
-                {
-                    Customer record = (Customer)result.recordList[0];
-                    customerId = record.internalId;
-                }
-                else
-                {
-                    //15302	CÔNG TY CP TẬP ĐOÀN THÁI TUẤN
-                    customerId = "15302";
-                }
-            }
-            else
-            {
-                customerId = "15302";
-            }
-
-            return customerId;
-        }
-
-        #endregion
-
-        #region ITEM SEARCH
-
-        public static string SEARCH_ITEM_INTERNALID(string name_search, string externalid)
-        {
-            NSClient ns = new NSClient();
-
-            string itemId = "";
-            ItemSearch itemSearch = new ItemSearch();
-            itemSearch.basic = new ItemSearchBasic
-            {
-                itemId = new SearchStringField
-                {
-                    @operator = SearchStringFieldOperator.contains,
-                    operatorSpecified = true,
-                    searchValue = name_search
-                }
-            };
-
-            // Execute the search
-            SearchResult result = ns.Service.search(itemSearch);
-            if (result.status.isSuccess)
-            {
-                if (result.recordList.Count() > 0)
-                {
-                    InventoryItem record = (InventoryItem)result.recordList[0];
-                    itemId = record.internalId;
-                }
-            }
-            else
-            {
-                itemId = "";
-            }
-
-            return itemId;
-        }
-
-        #endregion
-
-        #region TRANSACTION SEARCH
-        public static SearchResult TRANSACTION_SEARCH(string tranid, string transtype)
-        {
-            NSClient ns = new NSClient();
-
-            #region Get 
-            TransactionSearchBasic search = new TransactionSearchBasic();
-            search.type = new SearchEnumMultiSelectField();
-            search.type.@operator = SearchEnumMultiSelectFieldOperator.anyOf;
-            search.type.operatorSpecified = true;
-            search.type.searchValue = new string[] { transtype }; // Lọc theo loại giao dịch là Purchase Order
-            search.tranId = new SearchStringField();
-            search.tranId.@operator = SearchStringFieldOperator.@is;
-            search.tranId.operatorSpecified = true;
-            search.tranId.searchValue = tranid; // Đặt giá trị tranId cần tìm
-            SearchPreferences searchPrefs = new SearchPreferences();
-            SearchResult result = ns.Service.search(search); // Thực hiện tìm kiếm
-            #endregion
-            return result;
-        }
-
-        #endregion
+        public static string ND { get { return "1"; } }
+        public static string KXD { get { return "2"; } }
+        public static string XK { get { return "3"; } }
     }
-
-    public class CUSTOMRECORD
+    public static class LoaiKhoaCuaThaiTuan
     {
-        #region FUNC_SelectCustomFieldRef
-        public static SelectCustomFieldRef FUNC_SelectCustomFieldRef(string scriptid, string invalue)
-        {
-            SelectCustomFieldRef selectCustomFieldRef = new SelectCustomFieldRef();
-            ListOrRecordRef listOrRecordRef = new ListOrRecordRef();
-            listOrRecordRef.internalId = invalue;
-            selectCustomFieldRef.scriptId = scriptid;
-            selectCustomFieldRef.value = listOrRecordRef;
-            return selectCustomFieldRef;
-        }
-        public static SelectCustomFieldRef FUNC_SelectCustomFieldRef(string scriptid, string invalue, string exvalue)
-        {
-            SelectCustomFieldRef selectCustomFieldRef = new SelectCustomFieldRef();
-            ListOrRecordRef listOrRecordRef = new ListOrRecordRef();
-            listOrRecordRef.externalId = exvalue;
-            selectCustomFieldRef.scriptId = scriptid;
-            selectCustomFieldRef.value = listOrRecordRef;
-            return selectCustomFieldRef;
-        }
-        #endregion
+        public static string KeyHH { get { return "1"; } }
+        public static string KhoaTinhVatTu { get { return "2"; } }
+        public static string IdKhoaGiaThanh { get { return "3"; } }
 
-        #region FUNC_StringCustomFieldRef
-        public static StringCustomFieldRef FUNC_StringCustomFieldRef(string sciptid, string value)
-        {
-            StringCustomFieldRef stringCustomFieldRef = new StringCustomFieldRef();
-            stringCustomFieldRef.scriptId = sciptid;
-            stringCustomFieldRef.value = value;
-            return stringCustomFieldRef;
-        }
-        #endregion
-
-        #region FUNC_DoubleCustomFieldRef
-        public static DoubleCustomFieldRef FUNC_DoubleCustomFieldRef(string sciptid, double value)
-        {
-            DoubleCustomFieldRef doubleCustomFieldRef = new DoubleCustomFieldRef();
-            doubleCustomFieldRef.scriptId = sciptid;
-            doubleCustomFieldRef.value = value;
-            return doubleCustomFieldRef;
-        }
-        #endregion
-
-        #region FUNC_DateCustomFieldRef
-        public static DateCustomFieldRef FUNC_DateCustomFieldRef(string sciptid, string value)
-        {
-            DateCustomFieldRef dateCustomFieldRef = new DateCustomFieldRef();
-            dateCustomFieldRef.scriptId = sciptid;
-            dateCustomFieldRef.value = Convert.ToDateTime(value);
-            return dateCustomFieldRef;
-        }
-        #endregion
     }
-
-    public class BASERECORD
+    public static class Accounting
     {
-        public static void FUNC_ADD_ASSEMBLIES_ITEM_TO_BOM(string bomid, string itemid)
-        {
-            NSClient ns = new NSClient();
+        public static string COGSACCOUNT { get { return "935"; } }
+        public static string ASSETACCOUNT { get { return "388"; } }
+        public static string ASSETACCOUNTMN { get { return "362"; } }
+        public static string INCOME { get { return "656"; } }
 
-            try
-            {
-                LotNumberedAssemblyItem assemblyItem = new LotNumberedAssemblyItem() { externalId = itemid };
-                LotNumberedAssemblyItemBillOfMaterialsList lotNumberedAssemblyItemBillOfMaterialsList = new LotNumberedAssemblyItemBillOfMaterialsList();
-                LotNumberedAssemblyItemBillOfMaterials assemblyItemBillOfMaterials = new LotNumberedAssemblyItemBillOfMaterials() { billOfMaterials = new RecordRef() { type = RecordType.bom, externalId = bomid } };
-                lotNumberedAssemblyItemBillOfMaterialsList.lotNumberedAssemblyItemBillOfMaterials = new LotNumberedAssemblyItemBillOfMaterials[] { assemblyItemBillOfMaterials };
-                assemblyItem.billOfMaterialsList = (lotNumberedAssemblyItemBillOfMaterialsList);
-                WriteResponse response = ns.Service.upsert(assemblyItem);
-                if (response.status.isSuccess == false)
-                {
-                    var error = response.status.statusDetail.FirstOrDefault().message;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
     }
-
-    public class UPSERTDANHMUC
-    {
-        #region Upsert Danh mục 
-        public static byte FUNC_UPSERT_CustomRecord(string recordid, string value)
-        {
-            NSClient ns = new NSClient();
-            CustomRecord customRecord = new CustomRecord();
-
-            RecordRef recordRef = new RecordRef();
-            recordRef.internalId = recordid;
-            customRecord.recType = recordRef;
-            customRecord.name = value;
-            customRecord.externalId = value;
-            var response = ns.Service.upsert(customRecord);
-            if (response.status.isSuccess == false)
-            {
-                return 0;
-            }
-            return 1;
-        }
-        #endregion
-    }
+    
 }
